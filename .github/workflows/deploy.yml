@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@main
       - name: Markdown to GitHub Pages Deploy
         id: deploy
-        uses: Godners-Code/deploy-markdown-pages@main
+        uses: Godners-Code/deploy-markdown-pages@e4d04b7a15c3647f00ef660a9d855a41e5d5f820
         with:
           page-title: 'Hello World'
       - name: Show Outputs
