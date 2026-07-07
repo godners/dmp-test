@@ -1,0 +1,26 @@
+name: Deploy Markdown to GitHub Pages
+
+on:
+  workflow_dispatch:
+
+permissions: 
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Markdown to GitHub Pages Deploy
+        id: deploy
+        uses: Godners-Code/deploy-markdown-pages@v1
+        with:
+          page-title: 'Hello World'
+      - name: Show Outputs
+        run: |
+          echo "Run ID: ${{ steps.deploy.outputs.run-id }}
+          echo "Artifact Path: ${{ steps.deploy.outputs.artifact-path }}"
