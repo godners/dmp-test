@@ -25,4 +25,4 @@ jobs:
       - name: Show Outputs
         run: |
           echo "Run ID: ${{ steps.deploy.outputs.run-id }}"
-          echo "Artifact Path: ${{ steps.deploy.outputs.artifact-path }}"
+
