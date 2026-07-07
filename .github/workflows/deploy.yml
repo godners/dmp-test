@@ -22,7 +22,5 @@ jobs:
         uses: Godners-Code/deploy-markdown-pages@main
         with:
           page-title: 'Hello World'
-      - name: Show Outputs
-        run: |
-          echo "Run ID: ${{ steps.deploy.outputs.run-id }}"
+
 
